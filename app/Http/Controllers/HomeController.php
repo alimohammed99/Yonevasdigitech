@@ -101,7 +101,7 @@ class HomeController extends Controller
 
 
 
-            return view('User.home', compact('cat', 'book_limit', 'count', 'purchased_books'));
+            return view('user.home', compact('cat', 'book_limit', 'count', 'purchased_books'));
         }
     }
 
@@ -115,7 +115,7 @@ class HomeController extends Controller
         }else{
             $cat = BookCategories::all();
             $book_limit = Books::limit(2)->get();
-              return view('User.home', compact('cat', 'book_limit'));
+              return view('user.home', compact('cat', 'book_limit'));
         }
 
     }
@@ -137,11 +137,11 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.categories', compact('cat', 'book_limit', 'count', 'purchased_books'));
+            return view('user.categories', compact('cat', 'book_limit', 'count', 'purchased_books'));
         }else{
             $cat = BookCategories::all();
             $book_limit = Books::limit(2)->get();
-              return view('User.categories', compact('cat', 'book_limit'));
+              return view('user.categories', compact('cat', 'book_limit'));
         }
 
     }
@@ -177,7 +177,7 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.books_by_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
+            return view('user.books_by_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
         }else{
 
 
@@ -188,7 +188,7 @@ class HomeController extends Controller
 
 
                $book_limit = Books::limit(2)->get();
-              return view('User.books_by_categories', compact('data', 'data2', 'book_limit'));
+              return view('user.books_by_categories', compact('data', 'data2', 'book_limit'));
         }
     }
 
@@ -225,7 +225,7 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.books_by_paper_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
+            return view('user.books_by_paper_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
         }else{
 
 
@@ -237,7 +237,7 @@ class HomeController extends Controller
 
 
                $book_limit = Books::limit(2)->get();
-              return view('User.books_by_paper_categories', compact('data', 'data2', 'book_limit'));
+              return view('user.books_by_paper_categories', compact('data', 'data2', 'book_limit'));
         }
     }
 
@@ -271,10 +271,10 @@ class HomeController extends Controller
         //     $purchased_books = PurchasedBooksTable::where('book_id', $book->book_id)->where('user_id', $user->id)->first();
 
 
-            return view('User.find_books', compact('data', 'count', 'purchased_books'));
+            return view('user.find_books', compact('data', 'count', 'purchased_books'));
         }else{
             $data = Books::Paginate(6);
-              return view('User.find_books', compact('data'));
+              return view('user.find_books', compact('data'));
         }
 
     }
@@ -301,7 +301,7 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.careers', compact('count', 'purchased_books', 'marital_status', 'ShouldWeContactThem', 'TeachingExperience', 'TravelForWork', 'MedicalConditions', 'data'));
+            return view('user.careers', compact('count', 'purchased_books', 'marital_status', 'ShouldWeContactThem', 'TeachingExperience', 'TravelForWork', 'MedicalConditions', 'data'));
         }else{
             $marital_status = MaritalStatus::all();
             $ShouldWeContactThem = ShouldWeContactThem::all();
@@ -309,7 +309,7 @@ class HomeController extends Controller
             $TravelForWork = TravelForWork::all();
             $MedicalConditions = MedicalConditions::all();
             $data = ApplicationForm::all();
-              return view('User.careers', compact('marital_status', 'ShouldWeContactThem', 'TeachingExperience', 'TravelForWork', 'MedicalConditions', 'data'));
+              return view('user.careers', compact('marital_status', 'ShouldWeContactThem', 'TeachingExperience', 'TravelForWork', 'MedicalConditions', 'data'));
         }
 
     }
@@ -348,11 +348,11 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.about_us', compact('count', 'purchased_books'));
+            return view('user.about_us', compact('count', 'purchased_books'));
         }else{
             //$cat = BookCategories::all();
             //$book_limit = Books::limit(2)->get();
-              return view('User.about_us');
+              return view('user.about_us');
         }
 
     }
@@ -375,9 +375,9 @@ class HomeController extends Controller
 
             //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
             // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-            return view('User.contact_us', compact('count', 'purchased_books'));
+            return view('user.contact_us', compact('count', 'purchased_books'));
         }else{
-              return view('User.contact_us');
+              return view('user.contact_us');
         }
 
     }
@@ -658,7 +658,7 @@ public function read_book_abstract($id){
    $purchased_books = PurchasedBooksTable::where('user_id', $user->id)->count();
 
 
-        return view('User.read_book_abstract', compact('count', 'purchased_books', 'data'));
+        return view('user.read_book_abstract', compact('count', 'purchased_books', 'data'));
     }else{
 
 
@@ -673,7 +673,7 @@ public function read_book_abstract($id){
 
 
            $book_limit = Books::limit(2)->get();
-           return view('User.read_book_abstract', compact('data'));
+           return view('user.read_book_abstract', compact('data'));
     }
 
 }
@@ -704,7 +704,7 @@ public function read_paper_book_abstract($id){
    $purchased_books = PurchasedBooksTable::where('user_id', $user->id)->count();
 
 
-        return view('User.read_paper_book_abstract', compact('count', 'purchased_books', 'data'));
+        return view('user.read_paper_book_abstract', compact('count', 'purchased_books', 'data'));
     }else{
 
 
@@ -719,7 +719,7 @@ public function read_paper_book_abstract($id){
 
 
            $book_limit = Books::limit(2)->get();
-           return view('User.read_paper_book_abstract', compact('data'));
+           return view('user.read_paper_book_abstract', compact('data'));
     }
 
 }
@@ -875,7 +875,7 @@ public function paper_categories(){
 
         //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
         // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-        return view('User.paper_categories', compact('sub_cat', 'book_limit', 'count', 'purchased_books'));
+        return view('user.paper_categories', compact('sub_cat', 'book_limit', 'count', 'purchased_books'));
 
     }elseif(Auth::id()){
 
@@ -891,7 +891,7 @@ public function paper_categories(){
     }else{
         
 
-        $sub_cat = PaperCategories::all();
+     $sub_cat = PaperCategories::all();
         $book_limit = Books::limit(2)->get();
         return redirect()->back()->with('error', 'OOPS....You have to login first!');
     }
@@ -911,7 +911,7 @@ public function list_paper_categories($id){
 
 
 
-        $data = paperCategories::find($id);
+        $data = PaperCategories::find($id);
 
         $data2 = PaperBooks::where('category_id', $data->category_id)->get();
 
@@ -930,11 +930,11 @@ public function list_paper_categories($id){
 
         //  HERE, WE WANT TO COUNT THE CART ITEMS OF THE CURRENT USER. SO WE USED 'EMAIL' IN THE 'DB' COZ SOME USERS MIGHT HAVE SIMILAR OR SAME NAME BUT TWO USERS CANNOT HAVE THE SAME PHONE NUMBER. SO WE ARE COUNTING HOW MANY TIMES THIS PHONE NUMBER APPEARS IN THE CART TABLE.
         // SO AFTER COUNTING, WE ARE STORING IT IN A VARIABLE '$count'.
-        return view('User.books_by_paper_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
+        return view('user.books_by_paper_categories', compact('data', 'data2', 'book_limit', 'count', 'purchased_books'));
     }else{
 
 
-        $data = paperCategories::find($id);
+        $data = PaperCategories::find($id);
 
         $data2 = PaperBooks::where('category_id', $data->category_id)->get();
 
@@ -942,7 +942,7 @@ public function list_paper_categories($id){
 
 
            $book_limit = Books::limit(2)->get();
-          return view('User.books_by_paper_categories', compact('data', 'data2', 'book_limit'));
+          return view('user.books_by_paper_categories', compact('data', 'data2', 'book_limit'));
     }
 }
 
@@ -979,7 +979,7 @@ public function show_my_books(){
 
 
 
-        return view('User.show_my_books', compact('count', 'purchased_books', 'my_library'));
+        return view('user.show_my_books', compact('count', 'purchased_books', 'my_library'));
 
     }
 
@@ -1072,7 +1072,7 @@ public function download_my_books(Request $request, $mybook){
     if($this->isOnline()){
         $msg = " Sender Email => " . $request->email . "..................." . "Body of the message => " . $request->message;
         $mail_data = [
-            'recipient' => 'kidtalented1@gmail.com',
+            'recipient' => 'info@yonevasdigitech.study',
             'fromEmail' => $request->email, 
             'fromName' => $request->name, 
             'subject' => $request->subject, 
@@ -1127,7 +1127,7 @@ public function download_my_books(Request $request, $mybook){
   $count = carts::where('user_id', $user->id)->count();
   $purchased_books = PurchasedBooksTable::where('user_id', $user->id)->count();
     $data = ApplicationForm::all();
-    return view("User.download_application_form", compact('data', 'count', 'purchased_books'));
+    return view("user.download_application_form", compact('data', 'count', 'purchased_books'));
  }else{
     return redirect()->back()->with('error', 'OOPS...You have to log in first!');
  }
@@ -1144,7 +1144,7 @@ public function download_my_books(Request $request, $mybook){
 
 public function paystack(){
 
-          return view('User.data');
+          return view('user.data');
 
 }
 
