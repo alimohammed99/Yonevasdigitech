@@ -27,7 +27,7 @@
 
   <style>
     #cart:hover{
-  color: tomato;
+  color: #ffd700;
   background-color: white;
 }
 
@@ -80,13 +80,13 @@
 }
 
 .dropdown-content {
-  top: -5px;
+  top: -20px;
 
 }
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #ffd700;
   min-width: 190px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 2;
@@ -113,18 +113,77 @@
 
 
 #hover:hover{
-border-right:10px groove tomato;
-border-bottom:5px double tomato;
+border-right:10px groove #ffd700;
+border-bottom:5px double #ffd700;
 background-color:;
 color:;
 padding:15px;
 transition:0.2s;
+} 
+
+
+.section-heading {
+    text-align: left;
+    margin-bottom: ;
+    /* border-bottom: 1px solid teal; */
 }
+
+#aaa{
+  background:#040720;
+ 
+}
+
+#aaa:hover{
+  background-color:;
+  opacity:0.9;
+  transition:300ms;
+ 
+}
+
+#soc-links:hover{
+  color:white;
+  transform: rotate(360deg);
+  
+}
+
+/* <a href="tel:+2347048778559">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +234 704 877 8559
+                </span>
+              </a> */
+
 </style>
 
 </head>
 
 <body>
+
+
+<div style="background:#063547; border-bottom:2px solid #ffd700" class="topbar">
+      <div style="background:#063547" class="pt-3 container">
+        <div style="align-items: flex-start;" class="row" >
+          <div class="col-11 pl-0 text-sm">
+            <div style="font-size:18px; color:white" class="site-info">
+            <a style="color:#ffd700" href="javascript:;"><span class="mai-call text-primary"></span> How can we help you today?</a>
+            <span class="divider ml-2">|</span>
+              <a style="color:#ffd700" href="tel:+2347048778559"><span class="mai-call text-primary">   <i style="color:#ffd700" class="fa fa-phone" aria-hidden="true"></i></span>  Call +234 704 877 8559</a>
+              <span class="divider mr-2">|</span>
+              <a style="color:#ffd700" href="#"><span class="mai-mail text-primary">   <i style="color:#ffd700  " class="fa fa-envelope" aria-hidden="true"></i></span>support@yonevasdigitech.study</a>
+            </div>
+          </div>
+          <div class="col-1 pr-0 pl-0 pb-2 text-right text-sm">
+            <div style="font-size:20px" class="social-mini-button">
+              <a id="soc-links" style="color:#ffd700" href="#"><span id="soc-links" class="pr-2 fa fa-facebook"></span></a>
+              <a id="soc-links" style="color:#ffd700" href="#"><span id="soc-links" class="pr-2 fa fa-youtube"></span></a>
+              <a id="soc-links" style="color:#ffd700" href="#"><span id="soc-links" class="pr-2 fa fa-instagram"></span></a>
+              <a id="soc-links" style="color:#ffd700" href="#"><span id="soc-links" class="pr-2 fa fa-whatsapp"></span></a>
+            </div>
+          </div>
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div>
+</div>
 
   <div class="hero_area">
     <!-- header section strats -->
@@ -132,8 +191,8 @@ transition:0.2s;
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="{{url('/')}}">
-            <span>
-              YonevasDigiTech
+            <span style="font-size:42px; color:#ffd700">
+              Library
             </span>
           </a>
 
@@ -144,31 +203,31 @@ transition:0.2s;
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a id="hover" class="nav-link pl-lg-0" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                <a style="color:#ffd700" id="hover" class="nav-link pl-lg-0" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
               </li>
            
               <li class="nav-item">
-                <a id="hover" class="nav-link" href="{{url('categories')}}">Categories</a>
+                <a style="color:#ffd700" id="hover" class="nav-link" href="{{url('categories')}}">Categories</a>
               </li>
               <li class="nav-item">
-                <a id="hover" class="nav-link" href="{{url('find_books')}}"> Find Books</a>
+                <a style="color:#ffd700" id="hover" class="nav-link" href="{{url('find_books')}}"> Find Books</a>
               </li>
              
                      
               <li class="dropdown nav-item">
-              <a class="dropbtn nav-link" href="javascript:;"> Careers</a>
+              <a style="color:#ffd700" class="dropbtn nav-link" href="javascript:;"> Careers</a>
   <div class="dropdown-content">
-  <a href="{{url('careers')}}">Apply online</a>
-  <a href="{{url('download_application_form')}}">Download Application form</a>
+  <a style="color:black" href="{{url('careers')}}">Apply online</a>
+  <a style="color:black" href="{{url('download_application_form')}}">Download Application form</a>
 
   </div>
 </li>
 
               <li class="nav-item">
-                <a id="hover" class="nav-link" href="{{url('about_us')}}">About Us</a>
+                <a style="color:#ffd700" id="hover" class="nav-link" href="{{url('about_us')}}">About Us</a>
               </li>
               <li class="nav-item">
-                <a id="hover" class="nav-link" href="{{url('contact_us')}}">Contact Us</a>
+                <a style="color:#ffd700" id="hover" class="nav-link" href="{{url('contact_us')}}">Contact Us</a>
               </li>
 
 
@@ -183,12 +242,12 @@ transition:0.2s;
 
 
                     <li class="dropdown nav-item">
-              <a class="dropbtn nav-link" href="javascript:;"><i class="fa fa-user"></i> My Account</a>
+              <a style="color:#ffd700" class="dropbtn nav-link" href="javascript:;"><i class="fa fa-user"></i> My Account</a>
   <div class="dropdown-content">
-  <a id="cart" style="color:tomato; border-radius:; background-color:" class="nav-link cart" href="{{url('show_my_cart')}}"><i class="fa fa-shopping-cart"></i> My Cart [ {{$count}} ]  </a>
+  <a id="cart" style="color:#063547; border-radius:; background-color:#ffd700" class="nav-link cart" href="{{url('show_my_cart')}}"><i class="fa fa-shopping-cart"></i> My Cart [ {{$count}} ]  </a>
 
 
-  <a id="cart" style="color:tomato; border-radius:; background-color:" class="nav-link cart" href="{{url('show_my_books')}}"><i class="fa fa-book"></i> My Library [ {{$purchased_books}} ]  </a>
+  <a id="cart" style="color:#063547; border-radius:; background-color:#ffd700" class="nav-link cart" href="{{url('show_my_books')}}"><i class="fa fa-book"></i> My Library [ {{$purchased_books}} ]  </a>
 
   </div>
 </li>
@@ -211,10 +270,10 @@ transition:0.2s;
 
                     </x-app-layout>
                     @else
-                        <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Log in</a></li>
+                        <li class="nav-item"><a style="color:#ffd700" href="{{ route('login') }}" class="nav-link">Log in</a></li>
 
                         @if (Route::has('register'))
-                           <li class="nav-item"> <a href="{{ route('register') }}" class="nav-link">Register</a></li>
+                           <li class="nav-item"> <a style="color:#ffd700"href="{{ route('register') }}" class="nav-link">Register</a></li>
                         @endif
                     @endauth
           
@@ -372,6 +431,21 @@ containing facts, crime/investigation, romance, fantasy, fiction, literature, sc
 
   <!-- catagory section -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section class="catagory_section layout_padding">
     <div class="catagory_container">
       <div class="container ">
@@ -382,81 +456,97 @@ containing facts, crime/investigation, romance, fantasy, fiction, literature, sc
           <p>
           Various books and articles available on this site are sorted according to genres, search them by their categories.
           </p>
-        </div>
+        </div><br>
       
-  <div class="row">
-  @foreach($cat as $cat)
-  <div class="col-sm-6 col-md-4">
-    <div class="box ">
-   <div class="img-box ali">
 
-        @php
+<div class="card-group">
+           @foreach($cat as $cat)
 
-             if($cat->sub_category == 0){
+      <div class="col-md-4 p-0">
+                  
+        <div class="card">
+
+            <div id="aaa" style="width:" class="aaa card-body text-center">
+
+              <div class="img">
+                  @php
+
+                  if($cat->sub_category == 0){
               
 
-        @endphp
-            
-                <a href="{{url('books_by_categories', $cat->id)}}"><img class="catlist" src="categoriesimage/{{$cat->image}}" alt=""></a>
+                  @endphp
 
-        @php  
+                    <a href="{{url('books_by_categories', $cat->id)}}"><img style="max-width:70px; border:none; border-radius:13px;  background:white" class="catlist" src="categoriesimage/{{$cat->image}}" alt=""></a>
 
-             }else{
+                  @php  
 
-
-
-        @endphp
-              <a href="{{url('paper_categories')}}"><img class="catlist" src="categoriesimage/{{$cat->image}}" alt=""></a>
-
-
-        @php
-            
-            }  
-
-        @endphp
-
-              </div>
+                  }else{
 
 
 
-              
-              <div class="detail-box">
-                <h5>
-        @php
+                  @endphp
+                   <a href="{{url('paper_categories')}}"><img style="max-width:70px; border:none; border-radius:13px;  background:white"  class="catlist" src="categoriesimage/{{$cat->image}}" alt=""></a>
 
-                if($cat->sub_category == 0){
 
-        @endphp
-                <a id="link" href="{{url('books_by_categories', $cat->id)}}">{{$cat->category_name}}</a>
+                  @php
 
-        @php
+                  }  
 
-            }else{
-
-        @endphp
+                  @endphp
+              </div> <br>
         
-                  <a id="link" href="{{url('paper_categories')}}">{{$cat->category_name}}</a>
 
-        @php
+              <div class="text">
+                @php
+
+                    if($cat->sub_category == 0){
+
+                @endphp
+                   <a class="text" style="color:white" id="link" href="{{url('books_by_categories', $cat->id)}}">{{$cat->category_name}}</a>
+
+                @php
+
+                }else{
+
+                @endphp
+
+                 <a class="text" id="link" href="{{url('paper_categories')}}">{{$cat->category_name}}</a>
+
+                @php
                 }
 
-        @endphp
-                </h5>
-               
-                <!-- <p>
-                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                  The
-                  point of using
-                </p> -->
+                @endphp
               </div>
+
+
             </div>
-          
-          </div>
-          @endforeach
         </div>
+
       </div>
-    </div>
+          @endforeach
+</div>
+
+
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- end catagory section -->
  
@@ -509,22 +599,22 @@ to further research or related studies.
           <div class="client_container ">
             <div class="detail-box">
               <p>
-                Editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+              The library has so many helpful materials to rely on for research purposes and the assistance is very responsive too....love this kind of platform.
               </p>
               <span>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </span>
             </div>
             <div class="client_id">
-              <div class="img-box">
+              <!-- <div class="img-box">
                 <img src="images/c1.jpg" alt="">
-              </div>
+              </div> -->
               <div class="client_name">
                 <h5>
-                  Jone Mark
+                Christy E.
                 </h5>
                 <h6>
-                  Student
+                  Education Consultant
                 </h6>
               </div>
             </div>
@@ -534,22 +624,22 @@ to further research or related studies.
           <div class="client_container ">
             <div class="detail-box">
               <p>
-                Editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+              Finally there is a place to find textbooks and study guides without stress. This library is just one in a million.
               </p>
               <span>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </span>
             </div>
             <div class="client_id">
-              <div class="img-box">
+              <!-- <div class="img-box">
                 <img src="images/c2.jpg" alt="">
-              </div>
+              </div> -->
               <div class="client_name">
                 <h5>
-                  Anna Crowe
+                Loveth N.
                 </h5>
                 <h6>
-                  Student
+                Student
                 </h6>
               </div>
             </div>
@@ -559,19 +649,19 @@ to further research or related studies.
           <div class="client_container ">
             <div class="detail-box">
               <p>
-                Editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+              Very cool platform, I'm not a student of Yonevas College, but I found a lot of useful materials here for my project writing and defence. This is great. 
               </p>
               <span>
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </span>
             </div>
             <div class="client_id">
-              <div class="img-box">
+              <!-- <div class="img-box">
                 <img src="images/c3.jpg" alt="">
-              </div>
+              </div> -->
               <div class="client_name">
                 <h5>
-                  Hilley James
+                Emeka J.
                 </h5>
                 <h6>
                   Student
@@ -646,7 +736,7 @@ to further research or related studies.
       <div class="row">
       @foreach($book_limit as $book_limit)
         <div class="col-md-6">
-          <div class="box">
+          <div class="box" style="overflow:hidden; max-width:570px;">
             <div class="img-box">
               <img class="img-responsive" style="max-width:570px; max-height:500px; min-width:500px; min-height:350px" src="booksimages/{{$book_limit->image}}" alt="">
               <h4 class="blog_date">
@@ -848,55 +938,55 @@ to further research or related studies.
               Useful Links
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Yonevas College
                   </span>
                 </a>
-                <a href="">
+                <a href="javascript:;">
                   <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Library
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Y-Psl
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Articles
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Textbooks
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Crime/Investigation
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Self-help Journals
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 career
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 My Library
@@ -912,49 +1002,49 @@ to further research or related studies.
               Useful Links
             </h4>
             <div class="contact_link_box">
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Events  
                   </span>
                 </a>
-                <a href="">
+                <a href="javascript:;">
                   <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Enrollment
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Calendar
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Online courses
                 </span>
               </a>
-              <a href="">
+              <a href="{{url('contact_us')}}">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Contact Us
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Scholarship programs
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 student life
                 </span>
               </a>
-              <a href="">
+              <a href="javascript:;">
                 <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
                 <span>
                 Survey

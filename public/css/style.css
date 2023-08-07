@@ -95,12 +95,12 @@ a:focus {
 }
 
 .cart a:hover{
-  color: tomato;
+  color: #063547;
   background-color: white;
 }
 
 #cart:hover{
-  color: tomato;
+  color: #063547;
   background-color: white;
 }
 
@@ -148,6 +148,7 @@ a:focus {
   position:sticky;
   top:0%;
   padding-bottom:37px;
+  padding-top:37px;
 }
 
 .top_nav_container {

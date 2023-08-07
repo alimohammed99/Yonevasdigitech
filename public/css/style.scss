@@ -396,7 +396,11 @@ a:focus {
 
 
 .custom_nav-container .navbar-nav .nav-item .nav-link:hover{
-  color:red;
+  color:white;
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link{
+  color:#ffd700 !important;
 }
 
 // end catagory section

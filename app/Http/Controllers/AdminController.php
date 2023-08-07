@@ -26,7 +26,7 @@ use App\Models\PaperCategories;
 
 use App\Models\HasSubCategories;
 
-use App\Models\paperBooks;
+use App\Models\PaperBooks;
 
 use App\Models\TransactionTable;
 
@@ -362,6 +362,7 @@ class AdminController extends Controller
 
         if($usertype == '1'){
         $data = Books::find($id);
+        dd($data);
 
         return view("admin.view_books", compact('data'));
     }else{
